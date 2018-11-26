@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template" inherit_id="point_of_sale.template">
+
+  <t t-extend="PosWidget">
+    <t t-jquery=".pos-logo" t-operation="replace">
+      <img class="pos-logo" src="/pos_custom_button/static/src/img/logo.png"/>
+    </t>
+  </t>
+
+    <t t-name='CustomButtonWidget'>
+    <button class="mypad-button">MY BUTTON</button>
+  </t> 
+
+    <t t-name="CustomPageWidget">
+        <div class='page-list-container'>
+            <div class="page-list-scroller touch-scrollable">
+                <div class="page-list">
+                </div>
+            </div>
+        </div>
+    </t>
+
+</templates>

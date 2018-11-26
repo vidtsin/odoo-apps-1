@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+      <template id="assets" inherit_id="point_of_sale.index">
+        <xpath expr="//html/head/title" position="replace">
+          <title>Mon point de vente</title>
+          <link rel="stylesheet" href="/pos_custom_button/static/src/css/pos.css"/>
+        </xpath>
+      </template>
+
+      <template id="assets_backend" name="pos assets" inherit_id="point_of_sale.assets_backend">
+        <xpath expr="." position="inside">
+          <script type="text/javascript" src="/pos_custom_button/static/src/js/pos.js"></script>
+        </xpath>
+      </template>
+
+    </data>
+</openerp>
