@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="oo_consultation_view_form" model="ir.ui.view">
+            <field name="name">oo.consultation.view.form</field>
+            <field name="model">oo.consultation</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="titre"/>
+                            <field name="auteur_id"/>
+                            <field name="genre_id"/>
+                            <field name="code_isbn"/>
+                        </group>
+                        <group>
+                            <field name="editeur_id"/>
+                            <field name="collection_id"/>
+                            <field name="resume"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="oo_consultation_view_tree" model="ir.ui.view">
+            <field name="name">oo.consultation.view.tree</field>
+            <field name="model">oo.consultation</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="titre"/>
+                    <field name="auteur_id"/>
+                    <field name="editeur_id"/>
+                    <field name="genre_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="oo_consultation_action" model="ir.actions.act_window">
+            <field name="name">Bibliothèque</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">oo.consultation</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Créer vos livres
+              </p><p>
+                Enregistrer toutes les informations relatives aux livres que vous souhaiter
+                repertoriés
+              </p>
+            </field>
+        </record>
+
+        <menuitem
+                id="menu_oo_consultation"
+                name="Bibliothèque"
+                parent="oo_library_menu_root"
+                action="oo_consultation_action"/>
+
+
+    </data>
+</odoo>

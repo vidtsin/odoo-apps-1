@@ -1,0 +1,24 @@
+version: "3"
+services:
+  odoo:
+    container_name: odoo_cons_src
+    image: odoo:11.0
+    restart: always
+    ports:
+      - "8069:8069"
+    volumes:
+      - ./modules:/mnt/extra-addons/
+      - ./odoo_conf:/etc/odoo
+    depends_on:
+      - db
+
+  db:
+    container_name: odoo_cons_db
+    image: postgres:10
+    environment:
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    restart: always
+    ports:
+      - "5432:5432"
