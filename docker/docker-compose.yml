@@ -1,0 +1,14 @@
+# version: 2
+odoo:
+  extends:
+    file: common.yml
+    service: odoo
+  volumes:
+      - ./modules:/mnt/extra-addons/
+  links:
+    - database:db
+
+database:
+  extends:
+    file: common.yml
+    service: database

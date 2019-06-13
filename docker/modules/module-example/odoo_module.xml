@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+
+<!--Ceci est la vue.
+Le premier record qui a l'id person_form est le formulaire.
+Le deuxieme record qui a l'id person_tree est le tableau d'affichage.
+Le troisieme recort qui a l'id action_person est l'action qui sera declenche
+par le bouton menuitem dont l'id est person_menu_register_button. Son parent est
+person_menu_section.
+Le menuitem dont le name est Abdou et l'id person_menu s'affiche sur la bare de
+navigation. Il n'a pas de parent.
+Le menuitem dont le name est PersonMenus et l'id person_menu_section
+s'affiche a gauche. Son patrent est person_menu.-->
+
+<openerp>
+    <data>
+    <record model="ir.ui.view" id="person_form">
+        <field name="name">person.form</field>
+        <field name="model">person.model</field>
+        <field name="arch" type="xml">
+            <form string="Person">
+                <label string="Nom"/>
+                <field name="nom"/>
+                <label string="Prenom"/>
+                <field name="prenom"/>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="person_tree">
+        <field name="name">person.tree</field>
+        <field name="model">person.model</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Person">
+                <field name="nom"/>
+                <field name="prenom"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_person">
+        <field name="name">Person</field>
+        <field name="res_model">person.model</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Abdou" id="person_menu"/>
+        <menuitem name="PersonMenus" id="person_menu_section" parent="person_menu"/>
+            <menuitem name="register" id="person_menu_register_button" parent="person_menu_section" action="action_person"/>
+
+    </data>
+</openerp>

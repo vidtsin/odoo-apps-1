@@ -1,0 +1,14 @@
+odoo:
+  build: .
+  ports:
+    - "8887:8069"
+  container_name: test_odoo_10
+
+database:
+  image: postgres:9.4
+  container_name: test_posgres_94
+  environment:
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+  ports:
+    - "5425:5432"
