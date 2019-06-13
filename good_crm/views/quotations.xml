@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <menuitem id="good_crm_menu_quotation"
+      name="Quotations"
+      parent="good_crm_menu_current_operations"
+      action="sale.action_quotations"
+      sequence=""/>
+  </data>
+</odoo>

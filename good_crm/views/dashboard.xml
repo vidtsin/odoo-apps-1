@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <menuitem id="good_crm_menu_dashboard"
+      name="Dashboard"
+      parent="good_crm_menu_current_operations"
+      action="sales_team.crm_team_salesteams_act"
+      sequence="1"/>
+  </data>
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <menuitem id="good_crm_menu_activities"
+      name="Activities"
+      parent="good_crm_menu_current_operations"
+      action="crm.crm_lead_action_activities"
+      sequence=""/>
+  </data>
+</odoo>

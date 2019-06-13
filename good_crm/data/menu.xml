@@ -1,0 +1,20 @@
+<odoo>
+  <data>
+
+    <menuitem name="GoodCRM" id="good_crm_menu_root" web_icon="good_crm,static/description/icon.png"/>
+
+    <menuitem
+            id="good_crm_menu_current_operations"
+            name="Current Operations"
+            parent="good_crm_menu_root"
+            sequence="1"/>
+
+    <menuitem
+            id="good_crm_sales_people_objectives_menu"
+            name="Sales People Objectives"
+            parent="good_crm_menu_root"
+            sequence="2"/>
+
+
+  </data>
+</odoo>

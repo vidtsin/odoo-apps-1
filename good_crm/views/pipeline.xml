@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <menuitem id="good_crm_menu_pipeline"
+      name="Pipeline"
+      parent="good_crm_menu_current_operations"
+      action="crm.crm_lead_opportunities_tree_view"
+      sequence=""/>
+  </data>
+</odoo>
