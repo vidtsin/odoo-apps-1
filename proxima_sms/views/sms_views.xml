@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+      <menuitem id="sms_parent_menu" parent="proxima_sms_menu_root" name="Configurations" sequence="1"/>
+
+    </data>
+</openerp>

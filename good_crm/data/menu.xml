@@ -1,0 +1,13 @@
+<odoo>
+  <data>
+
+    <menuitem name="GoodCRM" id="good_crm_menu_root" web_icon="good_crm,static/description/icon.png"/>
+
+    <menuitem
+            id="menu_objectif_commerciaux"
+            name="Objectifs Commerciaux"
+            parent="good_crm_menu_root"/>
+
+
+  </data>
+</odoo>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+
+      <record id='view_wizard_evaluation_objectifs' model='ir.ui.view'>
+        <field name='name'>good_wizard_evaluation_objectifs</field>
+        <field name='model'>good.wizard.evaluer.objectif</field>
+        <field name='type'>form</field>
+        <field name='arch' type='xml'>
+          <form>
+            <sheet>
+              <group>
+                <field name='date'/>
+                <field name='client_id'/>
+                <field name='chiffre_affaire'/>
+                <field name='commercial_id'/>
+              </group>
+            </sheet>
+            <footer>
+              <button name='evaluer_objectif' string="Lancer l'évaluation"
+                type='object' default_focus='1' class='oe_highlight'/>
+
+                <button string='Annuler' class='oe_link' special='cancel'/>
+            </footer>
+          </form>
+        </field>
+      </record>
+
+      <record model='ir.actions.act_window' id='act_ouvrir_wizard_evaluation_objectifs'>
+        <field name='name'>Évaluation des objectifs</field>
+        <field name='type'>ir.actions.act_window</field>
+        <field name='res_model'>good.wizard.evaluer.objectif</field>
+        <field name='view_mode'>form</field>
+        <field name='target'>new</field>
+      </record>
+
+      <menuitem
+        id='menu_wizard_evaluation_objectifs'
+        name='Évaluation'
+        parent='menu_objectif_commerciaux'
+        action='act_ouvrir_wizard_evaluation_objectifs'/>
+
+  </data>
+</odoo>

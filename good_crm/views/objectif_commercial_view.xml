@@ -1,0 +1,74 @@
+<odoo>
+    <data>
+
+        <record id="good_objectif_commercial_view_form" model="ir.ui.view">
+            <field name="name">good.objectif.commercial.view.form</field>
+            <field name="model">good.objectif.commercial</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                        <button name="valider_objectif" string="Valider" class="oe_highlight" states="init" type="object"/>
+                        <button name="annuler_objectif" string="Annuler" class="oe_highlight" states="valider" type="object"/>
+                        <field name="state" widget="statusbar" statusbar_visible="valider" />
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="num"/>
+                            <field name="date"/>
+                            <field name="commercial_id"/>
+                        </group>
+                        <notebook>
+                            <page string="Objectifs">
+                                <group>
+                                  <field name="objectif_commercial_ids" nolabel="1" widget="one2many_list">
+                                    <tree editable="bottom">
+                                      <field name="client_id"/>
+                                      <field name="product_id"/>
+                                      <field name="nbre_vente" sum="Total"/>
+                                      <field name="chiffre_affaire" sum="Total"/>
+                                    </tree>
+                                  </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="good_objectif_commercial_view_tree" model="ir.ui.view">
+            <field name="name">good.objectif.commercial.view.tree</field>
+            <field name="model">good.objectif.commercial</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="num"/>
+                    <field name="date"/>
+                    <field name="commercial_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="good_assigner_objectif_commercial_action" model="ir.actions.act_window">
+            <field name="name">Objectifs commerciaux</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">good.objectif.commercial</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Enregistrer vos objectifs
+              </p><p>
+                C'est ici qu'on suit les objectifs des commerciaux
+              </p>
+            </field>
+        </record>
+
+        <menuitem
+                id="menu_objectif_commerciaux_assignation"
+                name="Assignation"
+                parent="menu_objectif_commerciaux"
+                action="good_assigner_objectif_commercial_action"/>
+
+
+    </data>
+</odoo>

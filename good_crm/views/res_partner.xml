@@ -1,0 +1,48 @@
+<odoo>
+  <data>
+
+    <record id="good_crm_res_partner" model="ir.ui.view">
+      <field name="name">Prospects</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+        <field name="street" position="before">
+          <field name='is_prospect'/>
+        </field>
+      </field>
+    </record>
+
+    <record id="good_crm_res_partner_action_form" model="ir.actions.act_window">
+      <field name="name">Prospects</field>
+      <field name="res_model">res.partner</field>
+      <field name="view_mode">tree,form</field>
+      <field name="context">{"search_default_is_prospect":1}</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Enregistrer un prospect
+        </p>
+        <p>
+          Un prospect est un client en cours d'acquisition
+        </p>
+      </field>
+    </record>
+
+    <record id="good_crm_res_partner_search" model="ir.ui.view">
+      <field name="name">good_crm_res_partner.search</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_res_partner_filter"/>
+      <field name="arch" type="xml">
+        <filter name="type_person" position="before">
+          <filter string="Prospects" name="is_prospect" domain="[('is_prospect','=',1)]"/>
+        </filter>
+      </field>
+    </record>
+
+    <menuitem id="menu_good_crm_res_partner"
+      name="Prospects"
+      parent="good_crm_menu_root"
+      action="good_crm_res_partner_action_form"
+      sequence=""/>
+
+  </data>
+</odoo>
