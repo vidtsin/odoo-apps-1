@@ -1,0 +1,12 @@
+odoo:
+  build: .
+  ports:
+    - "80:8069"
+  container_name: odoo_8
+
+database:
+  image: postgres:9.4
+  container_name: postgres_odoo_8
+  env_file: .env
+  ports:
+    - "5425:5432"

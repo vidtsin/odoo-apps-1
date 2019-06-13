@@ -2,7 +2,6 @@
 __pycache__/
 *.py[cod]
 *.pyc
-*.yaml
 *$py.class
 
 # C extensions
@@ -77,7 +76,7 @@ target/
 celerybeat-schedule
 
 # dotenv
-.env
+
 
 # virtualenv
 .venv/
@@ -93,4 +92,3 @@ ENV/
 # Personnal
 *~
 .idea
-web_notify/

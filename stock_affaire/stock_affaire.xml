@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+
+    <!-- Vue formulaire -->
+    <record model="ir.ui.view" id="stock.affaire_form">
+        <field name="name">stock.affaire.form</field>
+        <field name="model">stock.affaire</field>
+        <field name="arch" type="xml">
+            <form string="Affaire">
+                <label string="Nom"/>
+                <field name="nom"/>
+                <label string="Article"/>
+                <field name="article"/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vue liste -->
+    <record model="ir.ui.view" id="stock.affaire_tree">
+        <field name="name">stock.affaire.tree</field>
+        <field name="model">stock.affaire</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Affaire">
+                <field name="nom"/>
+                <field name="article"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action du menu -->
+    <record model="ir.actions.act_window" id="action_stock_affaire">
+        <field name="name">Affaire</field>
+        <field name="res_model">stock.affaire</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menus -->
+    <menuitem name="Affaire" id="affaire_menu" parent="stock.menu_stock_root"/>
+    <menuitem name="Articles par affaires" id="affaire_par_article_menu" parent="affaire_menu" action="action_stock_affaire"/>
+
+    </data>
+</openerp>
