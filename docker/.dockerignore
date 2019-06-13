@@ -1,0 +1,10 @@
+.gitignore
+.git/
+
+*README*
+*readme*
+*compose*
+.env
+common*
+production*
+completionHome/
