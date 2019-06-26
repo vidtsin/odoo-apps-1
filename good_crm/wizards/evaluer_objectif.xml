@@ -27,7 +27,7 @@
       </record>
 
       <record model='ir.actions.act_window' id='act_ouvrir_wizard_evaluation_objectifs'>
-        <field name='name'>Évaluation des objectifs</field>
+        <field name='name'>Evaluation of objectives</field>
         <field name='type'>ir.actions.act_window</field>
         <field name='res_model'>good.crm.wizard.evaluer.objectif</field>
         <field name='view_mode'>form</field>
@@ -36,7 +36,7 @@
 
       <menuitem
         id='good_crm_menu_wizard_evaluation_objectifs'
-        name='Évaluation'
+        name='Evaluation'
         parent='good_crm_sales_people_objectives_menu'
         action='act_ouvrir_wizard_evaluation_objectifs'/>
 

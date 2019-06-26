@@ -56,9 +56,9 @@
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
               <p class="oe_view_nocontent_create">
-                Enregistrer vos objectifs
+                Record your objectives
               </p><p>
-                C'est ici qu'on suit les objectifs des commerciaux
+                This is where we follow the objectives of sales people
               </p>
             </field>
         </record>

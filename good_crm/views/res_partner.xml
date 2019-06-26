@@ -22,10 +22,10 @@
       <field name="context">{"search_default_is_prospect":1}</field>
       <field name="help" type="html">
         <p class="oe_view_nocontent_create">
-          Enregistrer un prospect
+          Register a prospect
         </p>
         <p>
-          Un prospect est un client en cours d'acquisition
+          A prospect is a customer in the process of being acquired
         </p>
       </field>
     </record>
