@@ -5,7 +5,7 @@
 
     <menuitem
             id="menu_objectif_commerciaux"
-            name="Objectifs Commerciaux"
+            name="Salespeople Objectives"
             parent="good_crm_menu_root"/>
 
 

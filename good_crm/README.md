@@ -1,23 +1,23 @@
 # GoodCRM
 
-Module Odoo personnalisé pour le CRM
+Custom Odoo module for CRM
 
-## Fonctionnalités
+## Features
 
-### Ajout du menu GoodCRM
+#### Addition of the GoodCRM menu
 
-### Assignation d'objectifs aux commerciaux
+#### Assigning objectives to sales representatives
 
-Une assignation des objectifs prend en compte les éléments suivants :
+An assignment of objectives takes into account the following elements:
 
-✓ Le commercial
+✓ The sales representative
 
-✓ Le type de client
+✓ The type of customer
 
-✓ La période (date de début et date de fin)
+✓ The period (start date and end date)
 
-✓ Le produit (ou article)
+✓ The product (or article)
 
-✓ Le chiffre d’affaire
+✓ Turnover
 
-✓ Le nombre de ventes
+✓ The number of sales

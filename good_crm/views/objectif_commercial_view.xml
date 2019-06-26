@@ -50,15 +50,15 @@
         </record>
 
         <record id="good_assigner_objectif_commercial_action" model="ir.actions.act_window">
-            <field name="name">Objectifs commerciaux</field>
+            <field name="name">Salespeople Objectives</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">good.objectif.commercial</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
               <p class="oe_view_nocontent_create">
-                Enregistrer vos objectifs
+                Record your objectives
               </p><p>
-                C'est ici qu'on suit les objectifs des commerciaux
+                This is where we follow the objectives of the salespeople
               </p>
             </field>
         </record>
