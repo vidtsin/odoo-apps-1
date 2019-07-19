@@ -24,7 +24,7 @@
 
 {
 	'name': 'Odoo Single Login',
-	'price': 87
+	'price': 87,
     'currency': 'EUR',
     "images": ['images/undraw_hacker_mind_6y85.png'],
 	'version': '0.0.1',
