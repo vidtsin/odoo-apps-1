@@ -40,6 +40,7 @@ class Home(odoo.addons.web.controllers.main.Home):
 	@http.route('/web/login', type='http', auth="none")
 	def web_login(self, redirect=None, **kw):
 		odoo.addons.web.controllers.main.ensure_db()
+		request.params['login_success'] = False
 
 		if request.httprequest.method == 'GET' and redirect and request.session.uid:
 			return http.redirect_with_hash(redirect)
