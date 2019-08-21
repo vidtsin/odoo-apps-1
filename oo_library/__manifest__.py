@@ -15,7 +15,8 @@
     'depends': ['base', 'sale_management', 'purchase', 'stock'],
     'data': [
         'data/menu.xml',
-        'views/oo_consultation_view.xml'
+        'views/oo_consultation_view.xml',
+        'views/oo_product_template.xml'
     ],
     'demo': [],
     'test': [],

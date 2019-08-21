@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <!-- Héritage de la vue 'product.product_template_only_form_view' -->
+    <record model="ir.ui.view" id="oo_product_template_form">
+      <field name="name">oo_product_template.form</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_only_form_view"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='categ_id']" position='after'>
+          <!-- Ajout du champs 'book_id' -->
+          <field name="book_id"/>
+        </xpath>
+      </field>
+    </record>
+
+    <!-- Définition de l'action pour ouvrir le formulaire -->
+    <record model="ir.actions.act_window" id="oo_product_template_action">
+      <field name="name">Articles</field>
+      <field name="res_model">product.template</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Définition du menu Articles dans le module -->
+    <menuitem name="Articles"
+      id="menu_oo_product_template"
+      parent="oo_library_menu_root"
+      action="oo_product_template_action"/>
+
+  </data>
+</odoo>
