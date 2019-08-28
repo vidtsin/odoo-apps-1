@@ -16,7 +16,8 @@
     'data': [
         'data/menu.xml',
         'views/oo_consultation_view.xml',
-        'views/oo_product_template.xml'
+        'views/oo_product_template.xml',
+        'views/oo_purchase_order.xml'
     ],
     'demo': [],
     'test': [],

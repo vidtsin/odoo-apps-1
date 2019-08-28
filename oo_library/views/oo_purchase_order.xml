@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <!-- Définir l'action pour ouvrir le formulaire de devis -->
+    <record model="ir.actions.act_window" id="oo_purchase_order_action">
+      <field name="name">Devis</field>
+      <field name="res_model">purchase.order</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Afficher du menu Devis dans le module -->
+    <menuitem name="Devis"
+      id="menu_oo_purchase_order"
+      parent="oo_library_menu_root"
+      action="oo_purchase_order_action"/>
+
+  </data>
+</odoo>
